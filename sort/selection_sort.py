@@ -1,18 +1,18 @@
-def find_min_index(array):
+def find_min_index(li: []):
     min_index = 0
-    for i in range(len(array)):
-        if array[i] < array[min_index]:
+    for i in range(len(li)):
+        if li[i] < li[min_index]:
             min_index = i
     return min_index
 
 
-def switch(array, a, b):
-    tmp = array[a]
-    array[a] = array[b]
-    array[b] = tmp
+def switch(li: [], a: int, b: int):
+    tmp = li[a]
+    li[a] = li[b]
+    li[b] = tmp
 
 
-def selection_sort(array):
-    for i in range(len(array)):
-        min_index = find_min_index(array[i:])
-        switch(array, i, i + min_index)
+def selection_sort(li: []):
+    for i in range(len(li)):
+        min_index = find_min_index(li[i:])
+        switch(li, i, i + min_index)
